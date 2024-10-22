@@ -4,11 +4,12 @@
 
 import { SessionProvider } from 'next-auth/react';
 import { ReactNode } from 'react';
+import ReduxProvider  from '@/redux/ReduxProvider';
 
 interface ProvidersProps {
   children: ReactNode;
 }
 
 export default function Providers({ children }: ProvidersProps) {
-  return <SessionProvider>{children}</SessionProvider>;
+  return  <ReduxProvider>  <SessionProvider>{children}</SessionProvider>  </ReduxProvider>;
 }

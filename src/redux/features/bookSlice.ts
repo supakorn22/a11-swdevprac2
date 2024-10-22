@@ -9,7 +9,7 @@ const initialState: BookState = {
   bookItems: [],
 };
 
-const bookSlice = createSlice({
+export const bookSlice = createSlice({
   name: 'booking',
   initialState,
   reducers: {
